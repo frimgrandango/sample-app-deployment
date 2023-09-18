@@ -3,6 +3,9 @@ kind: Pod
 metadata:
   name: dnsutils
   namespace: default
+  labels:
+    app: dnsutils
+    env: dev
 spec:
   containers:
   - name: dnsutils
