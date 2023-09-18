@@ -1,6 +1,6 @@
 apiVersion: batch/v1
 kind: Job
-metdata:
+metadata:
   name: pre-hook
   annotations:
     argocd.argoproj.io/hook: PreSync
