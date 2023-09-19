@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus
+  namespace: logging
+spec:
+  project: default
+  source:
+    chart: prometheus-community/prometheus
+    repoURL: https://prometheus-community.github.io/helm-charts
+    targetRevision: 25.0.0
+    helm:
+      releaseName: prometheus-25.0.0
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: kubeseal
